@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title_block %}
+Change Profile
+{% endblock %}
+{% block body_block %}
+<form  method="POST">
+  {{ form.as_p}}
+  {% csrf_token %}
+  <button type="submit" name="button" class="btn btn-warning btn-sm">Change</button>
+</form>
+{% endblock %}
